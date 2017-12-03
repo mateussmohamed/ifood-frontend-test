@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardSongs match to snapshot 1`] = `
+<span
+  className="card-song"
+>
+  234
+   Songs
+</span>
+`;
