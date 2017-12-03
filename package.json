@@ -1,0 +1,41 @@
+{
+  "name": "spotifood",
+  "version": "0.1.0",
+  "private": true,
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -c storybook",
+    "storybook:build": "cross-env NODE_ENV=production BABEL_ENV=production build-storybook -c storybook"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "husky": "^0.14.3",
+    "jest-enzyme": "^4.0.1",
+    "lint-staged": "^5.0.0",
+    "prettier": "^1.8.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-scripts": "1.0.17",
+    "react-test-renderer": "^16.2.0",
+    "spotifood-wrapper": "^1.1.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.2.16",
+    "@storybook/addon-links": "^3.2.16",
+    "@storybook/react": "^3.2.16",
+    "eslint-config-airbnb": "^16.1.0"
+  }
+}
