@@ -1,0 +1,7 @@
+.card {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  max-width: 300px;
+  margin-right: 15px;
+}
