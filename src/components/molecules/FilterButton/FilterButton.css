@@ -1,0 +1,26 @@
+.filter-button {
+  min-width: 80px;
+  border-radius: 20px;
+  padding: 6px 10px;
+  text-align: center;
+  background-color: #0e1537;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  margin-right: 10px;
+  transition: all 0.5s;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.filter-button:hover,
+.filter-button--selected {
+  cursor: pointer;
+  background: #ffffff;
+  color: #0e1537;
+}
+
+.filter-button:hover,
+.filter-button:active,
+.filter-button:focus {
+  outline: 0;
+}
