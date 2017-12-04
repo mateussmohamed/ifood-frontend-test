@@ -1,0 +1,10 @@
+.filter-list {
+  margin-bottom: 20px;
+  padding: 0 3rem;
+}
+
+.filter-list-items {
+  display: flex;
+  flex-direction: row;
+  margin: 8px 0;
+}
