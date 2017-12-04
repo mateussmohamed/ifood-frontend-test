@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterTitle should FilterTitle match to snapshot 1`] = `
+<div
+  className="filter-title"
+>
+  awesome text
+</div>
+`;
