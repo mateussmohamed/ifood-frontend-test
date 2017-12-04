@@ -1,0 +1,96 @@
+{
+  "href":
+    "https://api.spotify.com/v1/users/spotify/playlists/37i9dQZF1DX34KNiFQJNVm/tracks?offset=1&limit=1",
+  "items": [
+    {
+      "added_at": "2017-12-01T02:51:17Z",
+      "added_by": null,
+      "is_local": false,
+      "track": {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify":
+                  "https://open.spotify.com/artist/1mXAhKnZEdF6rotyyd4GBi"
+              },
+              "href":
+                "https://api.spotify.com/v1/artists/1mXAhKnZEdF6rotyyd4GBi",
+              "id": "1mXAhKnZEdF6rotyyd4GBi",
+              "name": "MC Kevinho",
+              "type": "artist",
+              "uri": "spotify:artist:1mXAhKnZEdF6rotyyd4GBi"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5Uy6cnLbM2D3x5v2CMWXM3"
+          },
+          "href": "https://api.spotify.com/v1/albums/5Uy6cnLbM2D3x5v2CMWXM3",
+          "id": "5Uy6cnLbM2D3x5v2CMWXM3",
+          "images": [
+            {
+              "height": 640,
+              "url":
+                "https://i.scdn.co/image/9b17af01c5bfe010c2bd11769f0dec1ae819446a",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url":
+                "https://i.scdn.co/image/36e59e5b7777958ac1594a3223f76142b2f573f9",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url":
+                "https://i.scdn.co/image/d3e03972d1c32a071bf1453a7fb063124fc40ca0",
+              "width": 64
+            }
+          ],
+          "name": "Rabiola",
+          "type": "album",
+          "uri": "spotify:album:5Uy6cnLbM2D3x5v2CMWXM3"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify":
+                "https://open.spotify.com/artist/1mXAhKnZEdF6rotyyd4GBi"
+            },
+            "href": "https://api.spotify.com/v1/artists/1mXAhKnZEdF6rotyyd4GBi",
+            "id": "1mXAhKnZEdF6rotyyd4GBi",
+            "name": "MC Kevinho",
+            "type": "artist",
+            "uri": "spotify:artist:1mXAhKnZEdF6rotyyd4GBi"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 175660,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "BRKO11700182"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/228vRHzGfQh47EfLjuY1Yr"
+        },
+        "href": "https://api.spotify.com/v1/tracks/228vRHzGfQh47EfLjuY1Yr",
+        "id": "228vRHzGfQh47EfLjuY1Yr",
+        "name": "Rabiola",
+        "popularity": 56,
+        "preview_url":
+          "https://p.scdn.co/mp3-preview/05f67a3f7433c2c638321ab98a0f5bcd1d14b7f1?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:228vRHzGfQh47EfLjuY1Yr"
+      }
+    }
+  ],
+  "limit": 1,
+  "next":
+    "https://api.spotify.com/v1/users/spotify/playlists/37i9dQZF1DX34KNiFQJNVm/tracks?offset=2&limit=1",
+  "offset": 1,
+  "previous":
+    "https://api.spotify.com/v1/users/spotify/playlists/37i9dQZF1DX34KNiFQJNVm/tracks?offset=0&limit=1",
+  "total": 50
+}

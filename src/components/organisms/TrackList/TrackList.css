@@ -1,0 +1,13 @@
+.track-list-container {
+  padding: 3rem;
+}
+
+.track-list-title {
+  color: #7380af;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.track-list {
+  padding: 0;
+}
