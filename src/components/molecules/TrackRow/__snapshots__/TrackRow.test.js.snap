@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should TrackRow match to snapshot 1`] = `
+<li
+  className="track-row"
+>
+  <span
+    className="track-label title"
+  >
+    Congratulations
+  </span>
+  <span
+    className="track-label artist"
+  >
+    Post Malone
+  </span>
+  <span
+    className="track-label album"
+  >
+    Stoney
+  </span>
+  <span
+    className="track-label duration"
+  >
+    3:40
+  </span>
+</li>
+`;

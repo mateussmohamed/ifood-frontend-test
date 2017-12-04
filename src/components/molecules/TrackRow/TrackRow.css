@@ -1,0 +1,42 @@
+.track-row {
+  list-style: none;
+  color: #7380af;
+  padding: 10px 0;
+  border-bottom: 1px solid #1f2848;
+  transition: all 0.2s;
+  display: flex;
+  cursor: pointer;
+}
+
+.track-row:hover {
+  color: #ffffff;
+}
+
+.track-row:hover .playlist-item-button {
+  opacity: 1;
+}
+
+.track-row-button {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border: none;
+  margin-right: 10px;
+  opacity: 0;
+  outline: none;
+  background-size: 100%;
+  background-color: transparent;
+  background-image: url('%PUBLIC_URL1%/images/play-button.png');
+}
+
+@media screen and (max-width: 768px) {
+  .track-row .artist {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .track-row .album {
+    display: none;
+  }
+}
