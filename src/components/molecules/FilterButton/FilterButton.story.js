@@ -6,9 +6,9 @@ const stories = storiesOf('FilterButton', module);
 
 stories.add('whit text prop', () => (
   <div style={{ float: 'left' }}>
-    <FilterButton text="Brasil" />
-    <FilterButton text="México" />
-    <FilterButton text="Argentina" />
-    <FilterButton text="Colômbia" />
+    <FilterButton text="Brasil" action={e => console.log('Brasil', e)} />
+    <FilterButton text="México" action={e => console.log('México', e)} />
+    <FilterButton text="Argentina" action={e => console.log('Argentina', e)} />
+    <FilterButton text="Colômbia" action={e => console.log('Colômbia', e)} />
   </div>
 ));
