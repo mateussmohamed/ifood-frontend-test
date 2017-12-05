@@ -3,39 +3,5 @@
 exports[`Should TrackList match to snapshot 1`] = `
 <section
   className="track-list-container"
->
-  <h2
-    className="track-list-title"
-  >
-    Daily playlist (created for you, by us)
-  </h2>
-  <ul
-    className="track-list"
-  >
-    <li
-      className="track-row"
-    >
-      <span
-        className="track-label title"
-      >
-        Rabiola
-      </span>
-      <span
-        className="track-label artist"
-      >
-        MC Kevinho
-      </span>
-      <span
-        className="track-label album"
-      >
-        Rabiola
-      </span>
-      <span
-        className="track-label duration"
-      >
-        2:55
-      </span>
-    </li>
-  </ul>
-</section>
+/>
 `;
