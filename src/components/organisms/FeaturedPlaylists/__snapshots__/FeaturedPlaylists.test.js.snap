@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should FeaturedPlaylists match to snapshot 1`] = `
+<section
+  className="featured-playlists"
+>
+  <div
+    className="featured-playlists-message"
+  >
+    <div
+      className="message info"
+    >
+      Select filter for show playlists.
+    </div>
+  </div>
+</section>
+`;
