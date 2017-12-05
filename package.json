@@ -3,10 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
+    "src/**/*.{js}": ["eslint --fix", "git push"]
   },
   "scripts": {
     "precommit": "lint-staged",
