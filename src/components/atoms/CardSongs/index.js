@@ -8,7 +8,7 @@ const CardSongs = ({ songs }) => (
 );
 
 CardSongs.propTypes = {
-  songs: PropTypes.number.isRequired
+  songs: PropTypes.number.isRequired,
 };
 
 export default CardSongs;

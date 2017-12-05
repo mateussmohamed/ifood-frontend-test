@@ -9,7 +9,7 @@ const labels = {
   title: 'Congratulations',
   artist: 'Post Malone',
   album: 'Stoney',
-  duration: '3:40'
+  duration: '3:40',
 };
 
 stories.add('default', () => (

@@ -14,13 +14,13 @@ const CardImage = ({ src, title, width }) => (
 
 CardImage.defaultProps = {
   title: '',
-  width: 300
+  width: 300,
 };
 
 CardImage.propTypes = {
   src: PropTypes.string.isRequired,
   title: PropTypes.string,
-  width: PropTypes.number
+  width: PropTypes.number,
 };
 
 export default CardImage;

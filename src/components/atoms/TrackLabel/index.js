@@ -7,12 +7,12 @@ const TrackLabel = ({ text, type }) => (
 );
 
 TrackLabel.defaultProps = {
-  type: ''
+  type: '',
 };
 
 TrackLabel.propTypes = {
   text: PropTypes.string.isRequired,
-  type: PropTypes.string
+  type: PropTypes.string,
 };
 
 export default TrackLabel;

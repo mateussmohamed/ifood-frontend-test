@@ -5,7 +5,7 @@ import './FilterTitle.css';
 const FilterTitle = ({ text }) => <div className="filter-title">{text}</div>;
 
 FilterTitle.propTypes = {
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
 };
 
 export default FilterTitle;

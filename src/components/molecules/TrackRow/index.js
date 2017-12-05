@@ -12,11 +12,11 @@ const TrackRow = ({ labels }) => (
 );
 
 TrackRow.defaultProps = {
-  labels: {}
+  labels: {},
 };
 
 TrackRow.propTypes = {
-  labels: PropTypes.objectOf(PropTypes.any)
+  labels: PropTypes.objectOf(PropTypes.any),
 };
 
 export default TrackRow;

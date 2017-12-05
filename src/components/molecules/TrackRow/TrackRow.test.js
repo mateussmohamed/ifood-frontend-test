@@ -7,7 +7,7 @@ it('Should TrackRow match to snapshot', () => {
     title: 'Congratulations',
     artist: 'Post Malone',
     album: 'Stoney',
-    duration: '3:40'
+    duration: '3:40',
   };
 
   const component = <TrackRow labels={labels} />;

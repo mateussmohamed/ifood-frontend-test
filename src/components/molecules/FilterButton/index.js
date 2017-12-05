@@ -12,7 +12,7 @@ const FilterButton = ({ text, action }) => (
 
 FilterButton.propTypes = {
   text: PropTypes.string.isRequired,
-  action: PropTypes.func.isRequired
+  action: PropTypes.func.isRequired,
 };
 
 export default FilterButton;

@@ -6,7 +6,7 @@ import './CardTitle.css';
 const CardTitle = ({ title }) => <span className="card-title">{title}</span>;
 
 CardTitle.propTypes = {
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 export default CardTitle;
