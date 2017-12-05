@@ -1,39 +1,62 @@
 import React, { Component } from 'react';
+
 import spotifood from '../config/spotifood';
-import CardPlaylist from './organisms/CardPlaylist';
+
+import FilterList from './organisms/FilterList';
+import FeaturedPlaylists from './organisms/FeaturedPlaylists';
+import TrackList from './organisms/TrackList';
+
+import './App.css';
+
+const urlFilters = 'http://www.mocky.io/v2/5a2402212e0000470983bf2f';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      isLoading: false,
-      playlists: null
+      isLoading: true,
+      apiFilters: {},
+      playlists: {},
+      tracks: {},
     };
   }
 
-  componentWillMount() {
-    this.getFeaturedPlaylists();
+  async componentWillMount() {
+    await this.getFilters();
   }
 
-  getFeaturedPlaylists = async () => {
-    const filters = {
-      locale: 'pt_BR',
-      country: 'BR'
-    };
-    const playlists = await spotifood.browser.featuredPlaylists(filters);
-    this.setState({ playlists, isLoading: true });
-  };
+  getFilters = async () => {
+    const apiFilters = await fetch(urlFilters).then(res => res.json());
+    this.setState({ apiFilters, isLoading: false });
+  }
 
-  renderPlaylists = () => {
-    const { playlists } = this.state.playlists;
-    return <CardPlaylist data={playlists.items} />;
-  };
+  getFeaturedPlaylists = async (filter) => {
+    const playlists = await spotifood.browser.featuredPlaylists(filter);
+    this.setState({ playlists, isLoading: false, tracks: {} });
+  }
+
+  getTracksOfPlaylist = async (url) => {
+    const tracks = await spotifood.request(url);
+    this.setState({ tracks, isLoading: false });
+  }
+
+  showFeaturedPlaylists = value => () => this.getFeaturedPlaylists(value);
+
+  showTracksOfPlaylist = value => () => this.getTracksOfPlaylist(value);
+
   render() {
-    if (!this.state.isLoading) {
+    if (this.state.isLoading) {
       return <h1>Loading...</h1>;
     }
 
-    return <div>{this.state.playlists && this.renderPlaylists()}</div>;
+    const { apiFilters, playlists, tracks } = this.state;
+    return (
+      <div>
+        <FilterList data={apiFilters.filters} action={this.showFeaturedPlaylists} />
+        <FeaturedPlaylists data={playlists} action={this.showTracksOfPlaylist} />
+        <TrackList data={tracks} />
+      </div>
+    );
   }
 }
 

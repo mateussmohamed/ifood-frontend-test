@@ -1,1 +1,18 @@
+* {
+  box-sizing: border-box;
+}
 
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  background: #0e1537;
+  color: #fff;
+  height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
