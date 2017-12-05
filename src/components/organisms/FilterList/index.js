@@ -3,35 +3,36 @@ import PropTypes from 'prop-types';
 import FilterTitle from '../../atoms/FilterTitle';
 import FilterButton from '../../molecules/FilterButton';
 
+import { parseFilter } from '../../../utils';
+
 import './FilterList.css';
 
-const parseFilter = (id, value) => ({ [id]: value });
-
-const component = (data, action) => (
-  <section className="filter-list">
-    <FilterTitle text={data.name} />
+const renderFilters = (filter, action) => (
+  <section className="filter-list" key={filter.name}>
+    <FilterTitle text={filter.name} />
     <div className="filter-list-items">
-      {data.values.map(item => (
+      {filter.values.map(val => (
         <FilterButton
-          text={item.name}
-          key={item.name}
-          action={action(parseFilter(data.id, item.value))}
+          key={val.name}
+          text={val.name}
+          action={action(parseFilter(filter.id, val.value))}
         />
       ))}
     </div>
   </section>
 );
 
-const FilterList = ({ data, action }) =>
-  data && data.values ? component(data, action) : <div />;
+const FilterList = ({ data, action }) => (
+  data.map(filter => filter.values && renderFilters(filter, action))
+);
 
 FilterList.defaultProps = {
-  data: {}
+  data: [],
 };
 
 FilterList.propTypes = {
-  data: PropTypes.objectOf(PropTypes.any),
-  action: PropTypes.func.isRequired
+  data: PropTypes.arrayOf(PropTypes.object),
+  action: PropTypes.func.isRequired,
 };
 
 export default FilterList;

@@ -1,14 +1,13 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import FilterList from './index';
-import countryFilters from './mockFilters';
+import mockFilters from './mockFilters';
 
 it('Should FilterList match to snapshot', () => {
   const component = (
     <FilterList
-      data={countryFilters}
-      title="awesome playlist"
-      action={e => e}
+      data={mockFilters}
+      action={e => () => console.log(e)}
     />
   );
   const tree = renderer.create(component).toJSON();
