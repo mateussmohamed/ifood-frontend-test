@@ -7,10 +7,17 @@ import CardSongs from '../../atoms/CardSongs';
 
 import './Card.css';
 
-const Card = ({ image, title, songs }) => (
+const Card = ({
+  image,
+  title,
+  songs,
+  action,
+}) => (
   <div className="card">
     <CardImage src={image} title={title} />
-    <CardTitle title={title} />
+    <a href="#!" role="button" onClick={action}>
+      <CardTitle title={title} />
+    </a>
     <CardSongs songs={songs} />
   </div>
 );
@@ -18,7 +25,8 @@ const Card = ({ image, title, songs }) => (
 Card.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  songs: PropTypes.number.isRequired
+  songs: PropTypes.number.isRequired,
+  action: PropTypes.func.isRequired,
 };
 
 export default Card;

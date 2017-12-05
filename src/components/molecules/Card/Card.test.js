@@ -6,7 +6,10 @@ test('Should Card match to snapshot', () => {
   const props = {
     title: 'Bailando',
     image: 'https://i.scdn.co/image/723b3060add0aff0011fd2ae7d59237bbe788bb2',
-    songs: 234
+    songs: 234,
+    action() {
+      return e => console.log(e);
+    },
   };
   const component = renderer.create(<Card {...props} />);
   const tree = component.toJSON();

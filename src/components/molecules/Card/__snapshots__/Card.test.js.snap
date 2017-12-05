@@ -11,11 +11,17 @@ exports[`Should Card match to snapshot 1`] = `
     title="Bailando"
     width={300}
   />
-  <span
-    className="card-title"
+  <a
+    href="#!"
+    onClick={[Function]}
+    role="button"
   >
-    Bailando
-  </span>
+    <span
+      className="card-title"
+    >
+      Bailando
+    </span>
+  </a>
   <span
     className="card-song"
   >
