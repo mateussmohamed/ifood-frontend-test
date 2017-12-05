@@ -1,4 +1,17 @@
 .track-label {
-  flex-grow: 1;
   font-size: 14px;
+  text-align: left;
 }
+.track-label.title{
+  flex-basis: 30%;
+}
+.track-label.artist {
+  flex-basis: 30%;
+}
+.track-label.album {
+  flex-basis: 30%;
+}
+.track-label.duration {
+  flex-basis: 10%;
+}
+
