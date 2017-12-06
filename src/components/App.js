@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { equals } from 'ramda';
 
 import spotifood from '../config/spotifood';
 
@@ -8,21 +9,41 @@ import TrackList from './organisms/TrackList';
 
 import './App.css';
 
-const urlFilters = 'http://www.mocky.io/v2/5a2402212e0000470983bf2f';
+const urlFilters = 'http://www.mocky.io/v2/5a25fade2e0000213aa90776';
+const REFRESH_TIME = 3000;
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      isLoading: true,
+      activeFilters: {},
       apiFilters: {},
-      playlists: {},
-      tracks: {},
+      apiPlaylists: {},
+      apiTracks: {},
+      isLoading: true,
     };
   }
 
   async componentWillMount() {
     await this.getFilters();
+  }
+
+  // componentDidMount() {
+  //   refreshPlaylists(REFRESH_TIME, this.checkIfUpdatePlaylists);
+  // }
+
+  refreshPlaylists(ms, callback) {
+    return setTimeout(() => {
+      callback();
+      this.refreshPlaylists(ms, callback);
+    }, ms);
+  }
+
+  checkIfUpdatePlaylists = async () => {
+    const apiPlaylists = await spotifood.browse.featuredPlaylists(this.state.activeFilters);
+    if (equals(apiPlaylists, this.state.apiPlaylists)) {
+      this.setState({ apiPlaylists, isLoading: false });
+    }
   }
 
   getFilters = async () => {
@@ -31,13 +52,14 @@ class App extends Component {
   }
 
   getFeaturedPlaylists = async (filter) => {
-    const playlists = await spotifood.browser.featuredPlaylists(filter);
-    this.setState({ playlists, isLoading: false, tracks: {} });
+    const activeFilters = Object.assign({}, this.state.activeFilters, filter);
+    const apiPlaylists = await spotifood.browse.featuredPlaylists(activeFilters);
+    this.setState({ apiPlaylists, activeFilters, isLoading: false, apiTracks: {} });
   }
 
   getTracksOfPlaylist = async (url) => {
-    const tracks = await spotifood.request(url);
-    this.setState({ tracks, isLoading: false });
+    const apiTracks = await spotifood.request(url);
+    this.setState({ apiTracks, isLoading: false });
   }
 
   showFeaturedPlaylists = value => () => this.getFeaturedPlaylists(value);
@@ -45,16 +67,24 @@ class App extends Component {
   showTracksOfPlaylist = value => () => this.getTracksOfPlaylist(value);
 
   render() {
+
     if (this.state.isLoading) {
       return <h1>Loading...</h1>;
     }
 
-    const { apiFilters, playlists, tracks } = this.state;
+    const { apiFilters, apiPlaylists, apiTracks, activeFilters } = this.state;
     return (
       <div>
-        <FilterList data={apiFilters.filters} action={this.showFeaturedPlaylists} />
-        <FeaturedPlaylists data={playlists} action={this.showTracksOfPlaylist} />
-        <TrackList data={tracks} />
+        <FilterList
+          data={apiFilters.filters}
+          actives={activeFilters}
+          action={this.showFeaturedPlaylists}
+        />
+        <FeaturedPlaylists
+          data={apiPlaylists}
+          action={this.showTracksOfPlaylist}
+        />
+        <TrackList data={apiTracks} />
       </div>
     );
   }
