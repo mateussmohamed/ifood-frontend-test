@@ -8,7 +8,7 @@
   width: 100%;
 }
 
-.featured-playlists-cards {
+.featured-playlists-cards .slick-track {
   width: 100%;
   display: flex;
   flex-direction: row;

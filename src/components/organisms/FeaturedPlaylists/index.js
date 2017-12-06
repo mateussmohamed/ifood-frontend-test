@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Slider from 'react-slick';
 
 import Card from '../../molecules/Card';
 import Message from '../../atoms/Message';
 
 import './FeaturedPlaylists.css';
+import settingsSlider from './settingsSlider';
 
 const renderFeaturedPlaylists = (data, action) => (
-  <div className="featured-playlists-cards">
+  <Slider {...settingsSlider}>
     {data.map(item => (
       <Card
         key={item.id}
@@ -17,7 +19,7 @@ const renderFeaturedPlaylists = (data, action) => (
         action={action(item.tracks.href)}
       />
     ))}
-  </div>
+  </Slider>
 );
 
 const FeaturedPlaylists = ({ data, action }) => {
