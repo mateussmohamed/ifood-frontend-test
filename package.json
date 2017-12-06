@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "lint-staged": {
-    "src/**/*.{js}": ["eslint --fix", "git push"]
+    "src/**/*.{js}": [
+      "eslint --fix",
+      "git push"
+    ]
   },
   "scripts": {
     "precommit": "lint-staged",
@@ -24,11 +27,13 @@
     "normalize.css": "^7.0.0",
     "prettier": "^1.8.2",
     "prop-types": "^15.6.0",
+    "ramda": "^0.25.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-scripts": "1.0.17",
+    "react-slick": "^0.15.4",
     "react-test-renderer": "^16.2.0",
-    "spotifood-wrapper": "^1.1.1"
+    "spotifood-wrapper": "^1.1.5"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.16",
