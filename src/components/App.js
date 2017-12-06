@@ -9,8 +9,8 @@ import TrackList from './organisms/TrackList';
 
 import './App.css';
 
-const urlFilters = 'http://www.mocky.io/v2/5a25fade2e0000213aa90776';
-const REFRESH_TIME = 3000;
+const urlFilters = 'https://www.mocky.io/v2/5a25fade2e0000213aa90776';
+const REFRESH_TIME = 30000;
 
 class App extends Component {
   constructor() {
