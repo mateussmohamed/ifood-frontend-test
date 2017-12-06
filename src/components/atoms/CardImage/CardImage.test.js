@@ -13,6 +13,6 @@ describe('CardImage', () => {
   test('should width default prop equal 300', () => {
     const imageURL = 'http://via.placeholder.com/350x300';
     const component = renderer.create(<CardImage src={imageURL} />);
-    expect(component.toTree().props.width).toBe(300);
+    expect(component.toTree().props.width).toBe(250);
   });
 });

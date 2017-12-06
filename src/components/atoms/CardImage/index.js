@@ -14,7 +14,7 @@ const CardImage = ({ src, title, width }) => (
 
 CardImage.defaultProps = {
   title: '',
-  width: 300,
+  width: 250,
 };
 
 CardImage.propTypes = {
