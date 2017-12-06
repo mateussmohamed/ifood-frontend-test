@@ -2,7 +2,12 @@
   display: flex;
   justify-content: start;
   flex-direction: column;
-  width: 250;
-  max-width: 250;
+  width: 250px;
+  max-width: 250px;
   margin-right: 23px;
+  transition: all .3s;
+}
+
+.card:hover {
+  cursor: pointer;
 }
