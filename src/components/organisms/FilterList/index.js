@@ -10,25 +10,27 @@ import './FilterList.css';
 const isActive = (actives, filter, val) => (actives !== undefined && val !== undefined) && actives[filter] === val;
 
 const FilterList = ({ data, action, actives }) => (
-  data.map(filter => filter.values &&
-    (
-      <section className="filter-list" key={filter.name} >
-        <FilterTitle text={filter.name} />
-        <div className="filter-list-items">
-          {
-            filter.values.map((val) => (
-              <FilterButton
-                key={val.name}
-                text={val.name}
-                active={isActive(actives, filter.id, val.value) || false}
-                action={action(parseFilter(filter.id, val.value))}
-              />
-            ))
-          }
-        </div>
-      </section>
-    )
-  )
+  <section className="container-filter">
+    {data.map(filter => filter.values &&
+      (
+        <section className="filter-list" key={filter.name} >
+          <FilterTitle text={filter.name} />
+          <div className="filter-list-items">
+            {
+              filter.values.map((val) => (
+                <FilterButton
+                  key={val.name}
+                  text={val.name}
+                  active={isActive(actives, filter.id, val.value) || false}
+                  action={action(parseFilter(filter.id, val.value))}
+                />
+              ))
+            }
+          </div>
+        </section>
+      )
+    )}
+  </section>
 );
 
 
