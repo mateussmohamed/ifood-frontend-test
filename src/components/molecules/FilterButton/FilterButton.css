@@ -13,7 +13,7 @@
 }
 
 .filter-button:hover,
-.filter-button--selected {
+.filter-button.active {
   cursor: pointer;
   background: #ffffff;
   color: #0e1537;

@@ -2,7 +2,7 @@
 
 exports[`FilterButton should FilterButton match to snapshot 1`] = `
 <button
-  className="filter-button"
+  className="filter-button "
   onClick={[Function]}
 >
   <div
