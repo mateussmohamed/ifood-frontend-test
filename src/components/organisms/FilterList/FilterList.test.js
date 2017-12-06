@@ -6,7 +6,7 @@ import mockFilters from './mockFilters';
 it('Should FilterList match to snapshot', () => {
   const component = (
     <FilterList
-      data={mockFilters}
+      data={mockFilters.filters}
       action={e => () => console.log(e)}
     />
   );
