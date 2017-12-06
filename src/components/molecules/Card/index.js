@@ -10,11 +10,9 @@ import './Card.css';
 const Card = (props) => {
   const { image, title, songs, action } = props
   return (
-    <div className="card">
+    <div className="card" role="presentation" onClick={action}>
       <CardImage src={image} title={title} />
-      <a href="#!" role="button" onClick={action}>
         <CardTitle title={title} />
-      </a>
       <CardSongs songs={songs} />
     </div>
   )
