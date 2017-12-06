@@ -1,11 +1,14 @@
 .featured-playlists {
-  padding: 0 3rem;
   display: flex;
   flex-direction: column;
 }
 
 .featured-playlists-message {
   width: 100%;
+}
+
+.featured-playlists-cards {
+  padding: 10px 0;
 }
 
 .featured-playlists-cards .slick-track {
