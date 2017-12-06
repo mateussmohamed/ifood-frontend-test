@@ -9,8 +9,8 @@ it('Should TrackRow match to snapshot', () => {
     album: 'Stoney',
     duration: '3:40',
   };
-
-  const component = <TrackRow labels={labels} />;
+  const funcTest = () => () => 'funcTest';
+  const component = <TrackRow labels={labels} action={funcTest()} />;
   const tree = renderer.create(component).toJSON();
   expect(tree).toMatchSnapshot();
 });

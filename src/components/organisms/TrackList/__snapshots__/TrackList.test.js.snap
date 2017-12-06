@@ -4,33 +4,44 @@ exports[`Should TrackList match to snapshot 1`] = `
 <section
   className="track-list-container"
 >
-  <ul
-    className="track-list"
-  >
-    <li
-      className="track-row"
+  <div>
+    <div
+      className="message info"
     >
-      <span
-        className="track-label title"
+      This songs is only for preview, they last a maximum of 30s
+    </div>
+    <ul
+      className="track-list"
+    >
+      <li
+        className="track-row"
+        onClick={[Function]}
       >
-        Rabiola
-      </span>
-      <span
-        className="track-label artist"
-      >
-        MC Kevinho
-      </span>
-      <span
-        className="track-label album"
-      >
-        Rabiola
-      </span>
-      <span
-        className="track-label duration"
-      >
-        2:55
-      </span>
-    </li>
-  </ul>
+        <button
+          className="play-button"
+        />
+        <span
+          className="track-label title"
+        >
+          Rabiola
+        </span>
+        <span
+          className="track-label artist"
+        >
+          MC Kevinho
+        </span>
+        <span
+          className="track-label album"
+        >
+          Rabiola
+        </span>
+        <span
+          className="track-label duration"
+        >
+          2:55
+        </span>
+      </li>
+    </ul>
+  </div>
 </section>
 `;

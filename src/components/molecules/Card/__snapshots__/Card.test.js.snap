@@ -3,6 +3,8 @@
 exports[`Should Card match to snapshot 1`] = `
 <div
   className="card"
+  onClick={[Function]}
+  role="presentation"
 >
   <img
     alt="Bailando"
@@ -11,17 +13,11 @@ exports[`Should Card match to snapshot 1`] = `
     title="Bailando"
     width={250}
   />
-  <a
-    href="#!"
-    onClick={[Function]}
-    role="button"
+  <span
+    className="card-title"
   >
-    <span
-      className="card-title"
-    >
-      Bailando
-    </span>
-  </a>
+    Bailando
+  </span>
   <span
     className="card-song"
   >

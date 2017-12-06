@@ -5,7 +5,8 @@ import TrackList from './index';
 import mockTracks from './mockTracks.json';
 
 it('Should TrackList match to snapshot', () => {
-  const component = <TrackList data={mockTracks} />;
+  const funcTest = () => () => 'funcTest';
+  const component = <TrackList data={mockTracks} action={funcTest} />;
   const tree = renderer.create(component).toJSON();
   expect(tree).toMatchSnapshot();
 });

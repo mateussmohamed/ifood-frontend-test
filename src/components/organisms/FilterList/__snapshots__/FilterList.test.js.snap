@@ -1,152 +1,154 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Should FilterList match to snapshot 1`] = `
-Array [
+<section
+  className="container-filter"
+>
   <section
     className="filter-list"
->
+  >
     <div
-        className="filter-title"
+      className="filter-title"
     >
-        Locale
+      Locale
     </div>
     <div
-        className="filter-list-items"
+      className="filter-list-items"
     >
-        <button
-            className="filter-button "
-            onClick={[Function]}
+      <button
+        className="filter-button "
+        onClick={[Function]}
+      >
+        <div
+          className="filter-title"
         >
-            <div
-                className="filter-title"
-            >
-                en_AU
-            </div>
-        </button>
-        <button
-            className="filter-button "
-            onClick={[Function]}
+          en_AU
+        </div>
+      </button>
+      <button
+        className="filter-button "
+        onClick={[Function]}
+      >
+        <div
+          className="filter-title"
         >
-            <div
-                className="filter-title"
-            >
-                de_DE 
-            </div>
-        </button>
-        <button
-            className="filter-button "
-            onClick={[Function]}
+          de_DE 
+        </div>
+      </button>
+      <button
+        className="filter-button "
+        onClick={[Function]}
+      >
+        <div
+          className="filter-title"
         >
-            <div
-                className="filter-title"
-            >
-                pt_BR
-            </div>
-        </button>
-        <button
-            className="filter-button "
-            onClick={[Function]}
+          pt_BR
+        </div>
+      </button>
+      <button
+        className="filter-button "
+        onClick={[Function]}
+      >
+        <div
+          className="filter-title"
         >
-            <div
-                className="filter-title"
-            >
-                fr_FR
-            </div>
-        </button>
-        <button
-            className="filter-button "
-            onClick={[Function]}
+          fr_FR
+        </div>
+      </button>
+      <button
+        className="filter-button "
+        onClick={[Function]}
+      >
+        <div
+          className="filter-title"
         >
-            <div
-                className="filter-title"
-            >
-                en_US
-            </div>
-        </button>
-        <button
-            className="filter-button "
-            onClick={[Function]}
+          en_US
+        </div>
+      </button>
+      <button
+        className="filter-button "
+        onClick={[Function]}
+      >
+        <div
+          className="filter-title"
         >
-            <div
-                className="filter-title"
-            >
-                es_AR
-            </div>
-        </button>
+          es_AR
+        </div>
+      </button>
     </div>
-</section>,
+  </section>
   <section
     className="filter-list"
->
+  >
     <div
-        className="filter-title"
+      className="filter-title"
     >
-        País
+      País
     </div>
     <div
-        className="filter-list-items"
+      className="filter-list-items"
     >
-        <button
-            className="filter-button "
-            onClick={[Function]}
+      <button
+        className="filter-button "
+        onClick={[Function]}
+      >
+        <div
+          className="filter-title"
         >
-            <div
-                className="filter-title"
-            >
-                Australia
-            </div>
-        </button>
-        <button
-            className="filter-button "
-            onClick={[Function]}
+          Australia
+        </div>
+      </button>
+      <button
+        className="filter-button "
+        onClick={[Function]}
+      >
+        <div
+          className="filter-title"
         >
-            <div
-                className="filter-title"
-            >
-                Alemanhã
-            </div>
-        </button>
-        <button
-            className="filter-button "
-            onClick={[Function]}
+          Alemanhã
+        </div>
+      </button>
+      <button
+        className="filter-button "
+        onClick={[Function]}
+      >
+        <div
+          className="filter-title"
         >
-            <div
-                className="filter-title"
-            >
-                Brasil
-            </div>
-        </button>
-        <button
-            className="filter-button "
-            onClick={[Function]}
+          Brasil
+        </div>
+      </button>
+      <button
+        className="filter-button "
+        onClick={[Function]}
+      >
+        <div
+          className="filter-title"
         >
-            <div
-                className="filter-title"
-            >
-                Portugal
-            </div>
-        </button>
-        <button
-            className="filter-button "
-            onClick={[Function]}
+          Portugal
+        </div>
+      </button>
+      <button
+        className="filter-button "
+        onClick={[Function]}
+      >
+        <div
+          className="filter-title"
         >
-            <div
-                className="filter-title"
-            >
-                EUA
-            </div>
-        </button>
-        <button
-            className="filter-button "
-            onClick={[Function]}
+          EUA
+        </div>
+      </button>
+      <button
+        className="filter-button "
+        onClick={[Function]}
+      >
+        <div
+          className="filter-title"
         >
-            <div
-                className="filter-title"
-            >
-                Rússia
-            </div>
-        </button>
+          Rússia
+        </div>
+      </button>
     </div>
-</section>,
-]
+  </section>
+</section>
 `;

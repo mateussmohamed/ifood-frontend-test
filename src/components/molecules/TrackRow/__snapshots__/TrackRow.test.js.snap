@@ -3,7 +3,11 @@
 exports[`Should TrackRow match to snapshot 1`] = `
 <li
   className="track-row"
+  onClick={[Function]}
 >
+  <button
+    className="play-button"
+  />
   <span
     className="track-label title"
   >
