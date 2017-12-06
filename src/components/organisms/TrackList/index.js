@@ -8,15 +8,20 @@ import './TrackList.css';
 
 const TrackList = ({ data }) => {
   const { items = [] } = data;
-  if (!items.length) return (<section className="track-list-container" />);
   return (
     <section className="track-list-container">
-      <ul className="track-list">
-        {items.map((item) => {
-          const labels = getLabels(item.track);
-          return <TrackRow labels={labels} key={`track-${item.track.name}`} />;
-        })}
+      { items.length > 0 &&
+        <ul className="track-list">
+        {
+          items.map(item =>
+            <TrackRow
+              labels={getLabels(item.track)}
+              key={`track-${item.track.name}`}
+            />
+          )
+        }
       </ul>
+    }
     </section>
   );
 };
