@@ -9,7 +9,7 @@ exports[`Should Card match to snapshot 1`] = `
     className="card-image"
     src="https://i.scdn.co/image/723b3060add0aff0011fd2ae7d59237bbe788bb2"
     title="Bailando"
-    width={300}
+    width={250}
   />
   <a
     href="#!"
